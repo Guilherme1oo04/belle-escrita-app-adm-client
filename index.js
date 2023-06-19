@@ -17,8 +17,8 @@ app.post("/emailredacao", (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: 'belleescrita68@gmail.com',
-            pass: 'ujsfewkntlsjqnjf'
+            user: 'EMAIL QUE IRÁ UTILIZAR',
+            pass: 'SENHA DE APP GERADA PELO GOOGLE'
         }
     })
 
