@@ -173,7 +173,7 @@
         </section>
         <input type="hidden" name="input-correcao" class="input-correcao">
         <input type="hidden" name="redacao-atual" value=<?php echo $result['idRedacao'];?>>
-        <input type="hidden" name="tema-atual" value=<?php echo $result['tema'];?>>
+        <input type="hidden" name="tema-atual" value="<?php echo $result['tema'];?>">
         <input type="hidden" name="email-atual" value=<?php echo $result['emailAutor'];?>>
         <button onclick="return enviarCorrecao()" class="botao-enviar">Enviar Correção</button>
     </form>
