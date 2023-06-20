@@ -26,7 +26,7 @@ app.post("/emailredacao", (req, res) => {
         from: 'Belle Escrita',
         to: emailEnviar,
         subject: `Correção da redação com tema: ${tema}`,
-        html: `<h1>${tema}</h1><h2>Nota: ${nota}</h2><br>${correcao}`,
+        html: `<h1>${tema}</h1><br><h2>Nota: ${nota}</h2><br>${correcao}`,
     }).then(() => res.send('deu certo')).catch((err) => console.log(err))
 })
 
