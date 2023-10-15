@@ -87,7 +87,7 @@
             background-color: #fff;
             color: var(--cor2);
             border-radius: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             padding: 5px;
             position: relative;
         }
@@ -168,8 +168,24 @@
 
     <form action="enviaCorrecao.php" method="post">
         <section class="inputs">
-            <input type="number" name="nota" required placeholder=" " id="nota">
-            <label for="nota">Nota da Redação</label>
+            <input type="number" name="competencia1" required placeholder=" " id="competencia1" max=200>
+            <label for="nota">Competência 1</label>
+        </section>
+        <section class="inputs">
+            <input type="number" name="competencia2" required placeholder=" " id="competencia2" max=200>
+            <label for="nota">Competência 2</label>
+        </section>
+        <section class="inputs">
+            <input type="number" name="competencia3" required placeholder=" " id="competencia3" max=200>
+            <label for="nota">Competência 3</label>
+        </section>
+        <section class="inputs">
+            <input type="number" name="competencia4" required placeholder=" " id="competencia4" max=200>
+            <label for="nota">Competência 4</label>
+        </section>
+        <section class="inputs">
+            <input type="number" name="competencia5" required placeholder=" " id="competencia5" max=200>
+            <label for="nota">Competência 5</label>
         </section>
         <input type="hidden" name="input-correcao" class="input-correcao">
         <input type="hidden" name="redacao-atual" value=<?php echo $result['idRedacao'];?>>

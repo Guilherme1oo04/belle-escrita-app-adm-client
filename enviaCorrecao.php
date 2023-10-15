@@ -17,12 +17,14 @@
     $idRedAtual = $_POST['redacao-atual'];
     $temaAtual = $_POST['tema-atual'];
     $emailAtual = $_POST['email-atual'];
-    $nota = $_POST['nota'];
 
-    if ($nota > 1000){
-        header("location: corrigir.php");
-        $_SESSION['notademais'] = 'A nota máxima é 1000';
-    }
+    $nota1 = $_POST['competencia1'];
+    $nota2 = $_POST['competencia2'];
+    $nota3 = $_POST['competencia3'];
+    $nota4 = $_POST['competencia4'];
+    $nota5 = $_POST['competencia5'];
+
+    $nota = $nota1 + $nota2 + $nota3 + $nota4 + $nota5;
 
     $url = 'http://localhost:8085/emailredacao';
 
@@ -30,7 +32,11 @@
         "htmlCorrecao" => $correcao,
         "emailEnviar" => $emailAtual,
         "temaRed" => $temaAtual,
-        "nota" => $nota,
+        "nota1" => $nota1,
+        "nota2" => $nota2,
+        "nota3" => $nota3,
+        "nota4" => $nota4,
+        "nota5" => $nota5,
     );
     $json = json_encode($data);
 
